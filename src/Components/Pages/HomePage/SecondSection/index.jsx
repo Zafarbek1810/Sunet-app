@@ -23,18 +23,18 @@ const SecondSection = () => {
           </p>
 
           <div className="info-element">
-            <div className="elements">
-              <img src="/images/aboutznachok.png" alt="" />
-              <h5>Experience</h5>
-
-              <p>Our great team of more than 1400 software experts.</p>
+            <div className="element">
+              <img className="element__img" src="/images/aboutznachok.png" alt="" />
+              <h5 className="element__title">Experience</h5>
+              <div className="element__line"/>
+              <p className="element__text">Our great team of more than 1400 software experts.</p>
             </div>
 
-            <div className="elements">
-            <img src="/images/aboutznachok.png" alt="" />
-              <h5>Quick Support</h5>
-
-              <p>We’ll help you test bold new ideas while sharing your.</p>
+            <div className="element">
+              <img className="element__img" src="/images/aboutznachok.png" alt="" />
+              <h5 className="element__title">Quick Support</h5>
+              <div className="element__line"/>
+              <p className="element__text">We’ll help you test bold new ideas while sharing your.</p>
             </div>
           </div>
         </div>

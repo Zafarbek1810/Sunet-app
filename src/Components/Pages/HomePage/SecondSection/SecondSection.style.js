@@ -8,6 +8,30 @@ const SecondSectionWrapper = styled.div`
   align-items: center;
   justify-content: center;
 
+  /* .element {
+    &__img {
+
+    }
+
+    &__title {
+        
+    }
+
+    &__line {
+        
+    }
+
+    &__text {
+        
+    }
+
+    &:hover {
+        .element__line {
+            width: 100%;
+        }   
+    }
+  } */
+
   section {
     width: 100%;
     display: flex;
@@ -28,11 +52,7 @@ const SecondSectionWrapper = styled.div`
   }
   .info-element p{
     padding-right: 30px;
-  }
-  .elemts{
-    display: flex;
-    flex-direction: column;
-  }
+  } 
   .right{
     width: 50%; 
     text-align: center;
@@ -62,22 +82,49 @@ const SecondSectionWrapper = styled.div`
     line-height: 30px;
     font-family: 'Nunito Sans';
   }
-  .elements img{
+  .info-element{
+    gap: 10px;
+  }
+  .element img{
     color: #F67F00;
     width: 45px;
     padding-bottom: 15px;
   }
-  .elements h5{
+  .element h5{
     margin: 0;
     font-size: 18px; 
     color: #000;
     font-family: 'Nunito Sans';
 
   }
-  .elements p{
+  .element p{
     font-size: 16px;
     color: #6d6d6d;
   }
+  .element__line{
+    position: relative;
+      width: 91%;
+    height: 2px;
+    margin-top: 15px;
+    background-color: #EFEFEF;
+  }
+  
+.element .element__line:after {
+    content: "";
+    display: block;
+    height: 2px;
+    right: 0;
+    position: absolute;
+    background: #F67F00;
+    transition: width 0.3s ease 0s;
+    width: 0;
+}
+
+.element:hover > .element__line:after {
+    width: 100%;
+    left: 0 !important;
+}
+
 
   .right-icon{
     width: 15px;
