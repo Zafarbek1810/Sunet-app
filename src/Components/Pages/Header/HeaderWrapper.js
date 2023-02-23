@@ -44,8 +44,8 @@ const HeaderWrapper = styled.div`
     /* top: 20px; */
     left: 0;
     right: 0;
-    transform: translateY(0);
-    transition: transform 0.6s ease;
+    transform: translateY(-10px);
+    transition: transform 1s ease !important;
     z-index: 999;
     height: 100px;
 
@@ -95,7 +95,7 @@ const HeaderWrapper = styled.div`
     right: 0;
     z-index: 5555;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: 1s ease !important;
+    transition: 1s ease-out !important;
     height: 100px;
     font-family: sans-serif;
 

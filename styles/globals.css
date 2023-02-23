@@ -14,8 +14,10 @@ a {
 }
 
 * {
+  scroll-behavior: smooth !important;
   box-sizing: border-box;
 }
+
 
 
 @font-face {
@@ -144,10 +146,7 @@ a {
   font-display: swap;
 }
 
-*{
-  scroll-behavior: smooth;
 
-}
 .ant-message {
   z-index: 999990 !important;
 }
