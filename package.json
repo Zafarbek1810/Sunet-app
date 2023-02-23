@@ -17,12 +17,12 @@
     "antd": "^5.2.2",
     "aos": "^2.3.4",
     "next": "13.1.6",
-    "node-sass": "^8.0.0",
     "prop-types": "^15.8.1",
     "react": "18.2.0",
     "react-countup": "^6.4.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.2",
+    "react-phone-number-input": "^3.2.19",
     "sass": "^1.58.3",
     "styled-components": "^5.3.6",
     "use-context-selector": "^1.4.1"

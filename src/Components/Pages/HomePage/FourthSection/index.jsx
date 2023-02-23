@@ -1,5 +1,6 @@
 import React from "react";
 import Container from "../../../Common/Container";
+import { FourthWrapper } from "./fourthsec.style";
 
 const FourthSection = () => {
   return (

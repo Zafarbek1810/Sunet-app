@@ -69,20 +69,20 @@ const HeaderWrapper = styled.div`
     }
 
     .myDefaultButton {
-      background: transparent;
-      color: #000;
+      background: #002F49;
+      color: #fff;
       font-weight: 700;
       font-family: Nunito Sans;
       text-transform: uppercase;
-      border: 2px solid #000;
-      padding: 10px 20px;
-      width: 250px;
+      border: none;
+      padding:20px 10px;
+      width: 200px;
       transition: 300ms;
-      border-radius: 5px;
 
       &:hover {
         background-color: #fff;
         color: #000;
+        border: 1px solid #002F49;
       }
     }
   }
@@ -116,15 +116,21 @@ const HeaderWrapper = styled.div`
     }
 
     .myDefaultButton {
-      background: transparent;
-      color: white;
-      font-family: sans-serif;
+      background: #002F49;
+      color: #fff !important;
       font-weight: 700;
+      font-family: Nunito Sans;
       text-transform: uppercase;
-      border: 2px solid #fff;
-      padding: 10px 20px;
-      width: 250px;
-      border-radius: 5px;
+      border: none;
+      padding:20px 10px;
+      width: 200px;
+      transition: 300ms;
+
+      &:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #002F49;
+      }
     }
 
     a,

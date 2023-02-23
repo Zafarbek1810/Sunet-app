@@ -212,14 +212,14 @@ const Header = ({ isFixed }) => {
           </ul>
         </Container>
 
-        {/* <button
+        <button
           onClick={() => {
             setIsModalVisible((p) => !p);
           }}
           className="myDefaultButton getBtn"
         >
           Get in Touch
-        </button> */}
+        </button>
 
         <div
           onClick={handleBurger}
