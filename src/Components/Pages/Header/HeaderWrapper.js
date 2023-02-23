@@ -12,11 +12,11 @@ const HeaderWrapper = styled.div`
     color: #000;
     letter-spacing: 10px;
     font-family: sans-serif;
-    width: 10%;
+    width: 17%;
 
     img {
-      /* width: 100%; */
-      /* height: auto; */
+      width: 100% !important;
+      height: auto;
     }
 
     span {
