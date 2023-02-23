@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { FaRegular, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Container from "../../../Common/Container";
 import { SecondSectionWrapper } from "./SecondSection.style";
@@ -41,7 +43,10 @@ const SecondSection = () => {
             <div>
                 <img src="/images/about1.png" alt="" />
             </div>
+            <div className="bottom">
+            <FontAwesomeIcon icon={faArrowRight} className="right-icon" />
             <a href="#">learn more about us</a>
+            </div>
         </div>
       </section>
       </Container>
