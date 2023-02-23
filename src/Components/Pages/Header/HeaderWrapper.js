@@ -4,7 +4,6 @@ const HeaderWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.22);
   z-index: 1000;
 
-
   .logo {
     flex-shrink: 0;
     color: #000;
@@ -13,10 +12,11 @@ const HeaderWrapper = styled.div`
     color: #000;
     letter-spacing: 10px;
     font-family: sans-serif;
+    width: 10%;
 
-    img{
-      width: 100%;
-      height: auto;
+    img {
+      /* width: 100%; */
+      /* height: auto; */
     }
 
     span {
@@ -45,22 +45,30 @@ const HeaderWrapper = styled.div`
     left: 0;
     right: 0;
     transform: translateY(0);
-    //transition: transform 0.6s ease;
+    transition: transform 0.6s ease;
     z-index: 999;
+    height: 100px;
 
     .navs {
       p {
         color: #000;
         font-family: Nunito Sans;
         font-weight: 700;
+        transition: 300ms;
+
+        &:hover {
+          color: #f67f00 !important;
+        }
       }
     }
 
-    svg{
+    svg {
       color: #000 !important;
+      flex-shrink: 0;
+      width: 10px;
     }
 
-    .myDefaultButton{
+    .myDefaultButton {
       background: transparent;
       color: #000;
       font-weight: 700;
@@ -72,7 +80,7 @@ const HeaderWrapper = styled.div`
       transition: 300ms;
       border-radius: 5px;
 
-      &:hover{
+      &:hover {
         background-color: #fff;
         color: #000;
       }
@@ -87,17 +95,27 @@ const HeaderWrapper = styled.div`
     right: 0;
     z-index: 5555;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: 1s ease;
+    transition: 1s ease !important;
     height: 100px;
     font-family: sans-serif;
 
     p {
-        color: #000;
-        font-family: Nunito Sans;
-        font-weight: 700;
-      }
+      color: #000;
+      font-family: Nunito Sans;
+      font-weight: 700;
 
-    .myDefaultButton{
+      &:hover {
+        color: #f67f00 !important;
+      }
+    }
+
+    svg {
+      color: #000 !important;
+      flex-shrink: 0;
+      width: 10px;
+    }
+
+    .myDefaultButton {
       background: transparent;
       color: white;
       font-family: sans-serif;
@@ -108,7 +126,6 @@ const HeaderWrapper = styled.div`
       width: 250px;
       border-radius: 5px;
     }
-
 
     a,
     button {
@@ -151,12 +168,6 @@ const HeaderWrapper = styled.div`
         .angle-svg {
           color: #000 !important;
         }
-
-        &:hover {
-          svg {
-            color: black !important;
-          }
-        }
       }
     }
 
@@ -194,6 +205,29 @@ const HeaderWrapper = styled.div`
 
       li {
         list-style: none;
+
+        &:hover {
+          svg {
+            color: #f67f00 !important;
+          }
+
+          p {
+            color: #f67f00 !important;
+            position: relative;
+          }
+
+        }
+      }
+      p:after {
+        content: "";
+        display: block;
+        height: 3px;
+        left: 0%;
+        top: 30px;
+        position: absolute;
+        background: #f67f00;
+        transition: width 0.3s ease 0s;
+        width: 0;
       }
 
       .navs {
@@ -272,15 +306,26 @@ const HeaderWrapper = styled.div`
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
-
+    width: 270px;
 
     &__link {
-      padding: 15px 40px;
+      padding: 15px 20px;
       display: block;
       white-space: nowrap;
       position: relative;
       font-size: 13px;
       font-weight: 700;
+
+      span {
+        display: flex;
+        position: relative;
+
+        .spanIn{
+          color: #f67f00;
+          opacity: 0;
+          transition: 300ms;
+        }
+      }
 
       svg {
         position: absolute;
@@ -293,11 +338,22 @@ const HeaderWrapper = styled.div`
       }
 
       &:hover {
-        background-color: rgba(0, 0, 0, 0.05);
+        /* background-color: rgba(0, 0, 0, 0.05); */
 
         svg {
           left: 15px;
           opacity: 1;
+        }
+
+        span {
+          color: #f67f00;
+
+          .spanIn{
+            display: block;
+            margin-right: 5px;
+            margin-left: 5px;
+            opacity: 1;
+          }
         }
       }
     }
@@ -349,7 +405,6 @@ const HeaderWrapper = styled.div`
       &__link {
         color: #000;
         font-family: sans-serif;
-
       }
     }
   }
@@ -398,10 +453,10 @@ const HeaderWrapper = styled.div`
   }
 
   @media (max-width: 1024px) {
-    li{
+    li {
       list-style: none;
     }
-    a{
+    a {
       text-decoration: none;
     }
     .content {

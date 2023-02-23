@@ -2,7 +2,6 @@ import React from "react";
 import TopHeaderWrapper from "./TopHeaderWrapper";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faFacebookSquare,
   faInstagram,
   faLinkedinIn,
   faTwitter,

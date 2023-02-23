@@ -4,7 +4,7 @@ import { SecondSectionWrapper } from './SecondSection.style';
 const SecondSection = () => {
     return (
         <SecondSectionWrapper>
-            ddd
+            
         </SecondSectionWrapper>
     );
 };

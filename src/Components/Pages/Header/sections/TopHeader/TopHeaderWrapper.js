@@ -14,6 +14,11 @@ const TopHeaderWrapper = styled.div`
     display: flex;
     border-right: 1px solid #ffffff33;
 
+    svg{
+        width: 15px;
+        height: 15px;
+      }
+
     a {
       color: #b5b5b5;
       padding: 15px;
@@ -42,6 +47,8 @@ const TopHeaderWrapper = styled.div`
       border-left: 1px solid #ffffff33;
       svg{
         margin-right: 10px;
+        width: 10px;
+        height: 10px;
       }
 
       &:hover {

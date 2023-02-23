@@ -115,36 +115,9 @@ export const LINKS = [
     ],
     id: 6,
   },
-  // {
-  //   name: "Contact us",
-  //   path: "/contact",
-  //   id: 7,
-  // },
-  // {
-  //   name: "Pages",
-  //   path: "/",
-  //   dropMenu: [
-  //     {
-  //       title: "page 1",
-  //       path: "/#services",
-  //       id: 2.1,
-  //     },
-  //     {
-  //       title: "Page 2",
-  //       path: "/#services",
-  //       id: 2.2,
-  //     },
-  //     {
-  //       title: "Page 3",
-  //       path: "/#services",
-  //       id: 2.3,
-  //     },
-  //   ],
-  //   id: 2,
-  // },
 ];
 
-const Header = ({ isFixed, isArticlePage }) => {
+const Header = ({ isFixed }) => {
   const [header, setHeader] = useState("header");
   const { burger, handleBurger, setBurger } = useContext(HeaderContext);
   const ref = useRef(null);
@@ -157,9 +130,9 @@ const Header = ({ isFixed, isArticlePage }) => {
 
   useEffect(() => {
     const listenScrollEvent = () => {
-      if (window.scrollY < 40) {
+      if (window.scrollY < 180) {
         return setHeader("header");
-      } else if (window.scrollY > 40) {
+      } else if (window.scrollY > 180) {
         return setHeader("header2");
       }
     };
@@ -185,7 +158,6 @@ const Header = ({ isFixed, isArticlePage }) => {
   return (
     <HeaderWrapper>
       <TopHeader />
-      {/* <MainHeader isFixed={isFixed} isArticlePage={isArticlePage} /> */}
       <div className={`content ${header}`}>
         <div className="logo">
           <MyLink to="/" onClick={() => setBurger(false)}>
@@ -199,8 +171,8 @@ const Header = ({ isFixed, isArticlePage }) => {
                     : `images/logo2.png`
                   : `images/logo2.png`
               }
-              width={225}
-              height={32}
+              width={100}
+              height={72}
             />
           </MyLink>
         </div>
@@ -225,8 +197,10 @@ const Header = ({ isFixed, isArticlePage }) => {
                       {dropMenu.map((drop, idx) => (
                         <li key={idx} className="dropdown__item">
                           <MyLink to={drop.path} className="dropdown__link">
-                            {/* <FontAwesomeIcon icon={faArrowRight} /> */}
-                            <span>{drop.title}</span>
+                            <span>
+                              <div className="spanIn">//</div>
+                              {drop.title}
+                            </span>
                           </MyLink>
                         </li>
                       ))}
