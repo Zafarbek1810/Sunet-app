@@ -56,13 +56,17 @@ const HeaderWrapper = styled.div`
       }
     }
 
+    svg{
+      color: #000 !important;
+    }
+
     .myDefaultButton{
       background: transparent;
       color: #000;
       font-weight: 700;
       font-family: Nunito Sans;
       text-transform: uppercase;
-      border: 2px solid #fff;
+      border: 2px solid #000;
       padding: 10px 20px;
       width: 250px;
       transition: 300ms;
@@ -87,10 +91,17 @@ const HeaderWrapper = styled.div`
     height: 100px;
     font-family: sans-serif;
 
+    p {
+        color: #000;
+        font-family: Nunito Sans;
+        font-weight: 700;
+      }
+
     .myDefaultButton{
       background: transparent;
       color: white;
       font-family: sans-serif;
+      font-weight: 700;
       text-transform: uppercase;
       border: 2px solid #fff;
       padding: 10px 20px;
@@ -262,11 +273,6 @@ const HeaderWrapper = styled.div`
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease, top 0.3s ease;
 
-    &__list {
-    }
-
-    &__item {
-    }
 
     &__link {
       padding: 15px 40px;
@@ -274,6 +280,7 @@ const HeaderWrapper = styled.div`
       white-space: nowrap;
       position: relative;
       font-size: 13px;
+      font-weight: 700;
 
       svg {
         position: absolute;

@@ -44,6 +44,7 @@ const MainHeaderWrapper = styled.div`
     transform: translateY(0);
     //transition: transform 0.6s ease;
     z-index: 99999;
+    height: 60px;
 
     .navs {
       p {

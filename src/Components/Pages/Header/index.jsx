@@ -1,20 +1,22 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { HeaderContext } from "../../../Context/HeaderContext";
 import Container from "../../Common/Container";
-import MyLink from "../../Common/MyLink"
+import MyLink from "../../Common/MyLink";
 import HeaderWrapper from "./HeaderWrapper";
 import BurgerList from "./sections/MainHeader/Components/BurgerList";
-// import MainHeader from "./sections/MainHeader/MainHeader";
-import useWindowDimensions from "../../../Hooks/useWindow"
+import TopHeader from "./sections/TopHeader/TopHeader";
+import useWindowDimensions from "../../../Hooks/useWindow";
 import { ModalContext } from "../../../Context/ModalContext/Context";
 import { useContextSelector } from "use-context-selector";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
 export const LINKS = [
   {
     name: "About us",
     path: "/about",
     id: 1,
-      dropMenu: [
+    dropMenu: [
       {
         title: "Our history",
         path: "/#services",
@@ -36,7 +38,7 @@ export const LINKS = [
     name: "Services",
     path: "/",
     id: 2,
-      dropMenu: [
+    dropMenu: [
       {
         title: "How do we work",
         path: "/#services",
@@ -47,7 +49,6 @@ export const LINKS = [
         path: "/#services",
         id: 2.2,
       },
-      
     ],
   },
   {
@@ -85,7 +86,6 @@ export const LINKS = [
         path: "/#services",
         id: 4.5,
       },
-      
     ],
   },
   {
@@ -142,7 +142,6 @@ export const LINKS = [
   //   ],
   //   id: 2,
   // },
-  
 ];
 
 const Header = ({ isFixed, isArticlePage }) => {
@@ -153,7 +152,7 @@ const Header = ({ isFixed, isArticlePage }) => {
 
   const setIsModalVisible = useContextSelector(
     ModalContext,
-    (state) => state[1],
+    (state) => state[1]
   );
 
   useEffect(() => {
@@ -182,13 +181,14 @@ const Header = ({ isFixed, isArticlePage }) => {
       window.removeEventListener("click", listenClickWindow);
     };
   }, []);
+
   return (
     <HeaderWrapper>
+      <TopHeader />
       {/* <MainHeader isFixed={isFixed} isArticlePage={isArticlePage} /> */}
       <div className={`content ${header}`}>
         <div className="logo">
           <MyLink to="/" onClick={() => setBurger(false)}>
-            {/* <span>SUN</span>ET */}
             <img
               src={
                 width > 991
@@ -210,14 +210,13 @@ const Header = ({ isFixed, isArticlePage }) => {
               <li key={id}>
                 <MyLink to={path}>
                   <div className="navs">
-                   
                     <p>{name}</p>
-                    {/* {dropMenu && (
+                    {dropMenu && (
                       <FontAwesomeIcon
                         className="angle-svg"
                         icon={faAngleDown}
                       />
-                    )} */}
+                    )}
                   </div>
                 </MyLink>
                 {dropMenu && (
@@ -239,14 +238,14 @@ const Header = ({ isFixed, isArticlePage }) => {
           </ul>
         </Container>
 
-        <button
+        {/* <button
           onClick={() => {
             setIsModalVisible((p) => !p);
           }}
           className="myDefaultButton getBtn"
         >
           Get in Touch
-        </button>
+        </button> */}
 
         <div
           onClick={handleBurger}
@@ -254,7 +253,7 @@ const Header = ({ isFixed, isArticlePage }) => {
         >
           <span></span>
         </div>
-        <BurgerList burger={burger}  />
+        <BurgerList burger={burger} />
       </div>
     </HeaderWrapper>
   );
