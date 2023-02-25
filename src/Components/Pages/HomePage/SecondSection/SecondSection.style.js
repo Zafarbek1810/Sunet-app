@@ -61,7 +61,7 @@ const SecondSectionWrapper = styled.div`
     margin: 0;
     font-size: 14px;
     font-weight: 800;
-    color: #7141b1;
+    color: #F67F00;
     position: relative;
     display: inline-block;
     margin-bottom: 7px;

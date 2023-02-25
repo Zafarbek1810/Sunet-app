@@ -30,7 +30,7 @@ const Footer = () => {
     <FooterWrapper>
       <Container>
         <div className="logo">
-          <img src="images/logo.png" alt="" />
+          <img src="/images/logo.png" alt="" />
         </div>
         <div className="cards">
           {card.map((v, i) => (

@@ -20,7 +20,8 @@ const FooterWrapper = styled.div`
     .card{
         text-align: center;
         svg{
-            width: 30px;
+            width: 30px !important;
+            font-size: 40px;
             color: #F67F00;
         }
 

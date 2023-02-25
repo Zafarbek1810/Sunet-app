@@ -37,7 +37,7 @@ const Banner = () => {
         <BannerWrapper>
           <Container>
             <div className="wrap">
-              <h4 className="subtitle">//Full Cucle Software Development</h4>
+              <h4 className="subtitle">Full Cucle Software Development</h4>
               <h1 className="title">From Idea to Product</h1>
               <p className="desc">
                 We are 100+ professional software engineers with more than. 10
@@ -58,7 +58,7 @@ const Banner = () => {
         <BannerWrapper2>
           <Container>
           <div className="wrap">
-              <h4 className="subtitle">// Full Cucle Software Development</h4>
+              <h4 className="subtitle"> Full Cucle Software Development</h4>
               <h1 className="title">From Idea to Product</h1>
               <p className="desc">
                 We are 100+ professional software engineers with more than. 10

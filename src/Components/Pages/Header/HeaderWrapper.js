@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
     color: #000;
     letter-spacing: 10px;
     font-family: sans-serif;
-    width: 17%;
+    width: 15%;
 
     img {
       width: 100% !important;
@@ -41,13 +41,12 @@ const HeaderWrapper = styled.div`
   .header {
     background-color: #fff;
     position: absolute;
-    /* top: 20px; */
     left: 0;
     right: 0;
     transform: translateY(-10px);
-    transition: transform 1s ease !important;
+    transition: transform 0.3s ease !important;
     z-index: 999;
-    height: 100px;
+    height: 100px !important;
 
     .navs {
       p {
@@ -95,7 +94,7 @@ const HeaderWrapper = styled.div`
     right: 0;
     z-index: 5555;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: 1s ease-out !important;
+    transition: 0.3s ease-out !important;
     height: 100px;
     font-family: sans-serif;
 
@@ -200,9 +199,7 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
     /* position: relative; */
 
-    img {
-      width: 230px;
-    }
+  
 
     .links_cont {
       display: flex;
