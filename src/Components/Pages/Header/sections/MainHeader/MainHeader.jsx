@@ -164,6 +164,7 @@ const MainHeader = ({ isFixed }) => {
         setBurger(false);
       }
     };
+    
 
     window.addEventListener("scroll", listenScrollEvent);
     window.addEventListener("click", listenClickWindow);
