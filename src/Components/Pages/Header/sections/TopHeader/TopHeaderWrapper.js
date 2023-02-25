@@ -98,6 +98,16 @@ const TopHeaderWrapper = styled.div`
       }
     }
   }
+
+  @media(max-width: 550px){
+    .left_side{
+      display: none;
+    }
+    .right_side{
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
 `;
 
 export default TopHeaderWrapper;

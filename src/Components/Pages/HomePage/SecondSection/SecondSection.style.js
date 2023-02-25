@@ -143,6 +143,30 @@ const SecondSectionWrapper = styled.div`
     color: #F67F00;
     font-weight: 600;
   }
+
+  @media (max-width: 650px) {
+    padding: 30px 0;
+    section{
+      flex-direction: column;
+
+      .left{
+        width: 100%;
+
+        p{
+          font-size: 14px;
+        }
+      }
+
+      .right{
+        width: 100%;
+
+        img{
+          width: 100%;
+          margin-bottom: 30px;
+        }
+      }
+    }
+  }
 `;
 
 export { SecondSectionWrapper };

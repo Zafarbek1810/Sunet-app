@@ -86,6 +86,43 @@ const FooterWrapper = styled.div`
         }
     }
   }
+
+  @media (max-width: 650px) {
+    padding: 50px 0;
+    .logo{
+      width: 50%;
+    }
+
+    .cards{
+      flex-direction: column;
+
+      .card{
+        margin-bottom: 30px;
+      }
+    }
+
+    .links{
+      width: 100% !important;
+    }
+
+    ul{
+      padding: 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      li{
+        margin-bottom: 10px;
+      }
+    }
+
+    .sunet{
+      font-size:14px;
+    }
+
+    .icons{
+      width: 40%;
+    }
+  }
 `;
 
 export { FooterWrapper };

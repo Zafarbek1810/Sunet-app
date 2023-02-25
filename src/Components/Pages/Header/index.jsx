@@ -10,6 +10,7 @@ import { ModalContext } from "../../../Context/ModalContext/Context";
 import { useContextSelector } from "use-context-selector";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import MainHeader from "./sections/MainHeader/MainHeader";
 
 export const LINKS = [
   {
@@ -158,9 +159,10 @@ const Header = ({ isFixed }) => {
   return (
     <HeaderWrapper>
       <TopHeader />
-      <div className={`content ${header}`}>
+      <MainHeader isFixed={isFixed}/>
+      {/* <div className={`content ${header}`}>
         <div className="logo">
-          <MyLink to="/" onClick={() => setBurger(false)}>
+          <MyLink to="/" onClick={() => setBurger(p => !p)}>
             <img
               src={
                 width > 991
@@ -228,7 +230,7 @@ const Header = ({ isFixed }) => {
           <span></span>
         </div>
         <BurgerList burger={burger} />
-      </div>
+      </div> */}
     </HeaderWrapper>
   );
 };

@@ -52,5 +52,18 @@ min-height: 100vh;
     line-height: 28px;
 }
 
+@media (max-width: 650px) {
+    .title{
+        font-size: 32px;
+    }
+    .box-wrapper{
+        flex-direction: column;
+
+        .box{
+            width: 100%;
+        }
+    }
+}
+
 `
 export {FourthWrapper};

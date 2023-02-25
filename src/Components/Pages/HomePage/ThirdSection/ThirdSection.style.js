@@ -34,7 +34,7 @@ const ThirdSectionWrapper = styled.div`
         border: 1px solid #46416b;
         padding: 40px 30px;
         overflow: hidden;
-        background-color: rgb(246,127,0, 0.9);
+        background-color: rgb(246, 127, 0, 0.9);
         transition: 300ms ease-in;
 
         span {
@@ -48,118 +48,152 @@ const ThirdSectionWrapper = styled.div`
         }
 
         h6 {
-            margin-top: 0;
+          margin-top: 0;
           font-size: 20px;
           font-weight: 700;
           line-height: 30px;
           color: #fff;
           margin-bottom: 10px;
         }
-        p{
-            color: #fff;
-            font-size: 16px;
-            font-weight: 30;
+        p {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 30;
         }
 
-        .link{
-            display: flex;
-            align-items: center;
-            color: #002f49;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 50px;
-            svg{
-                margin-right: 20px;
-                width: 15px;
-                transition: 300ms;
-            }
+        .link {
+          display: flex;
+          align-items: center;
+          color: #002f49;
+          font-weight: 600;
+          text-transform: uppercase;
+          margin-bottom: 50px;
+          svg {
+            margin-right: 20px;
+            width: 15px;
+            transition: 300ms;
+          }
 
-            &:hover{
-                svg{
-                    margin-right: 10px;
-                }
+          &:hover {
+            svg {
+              margin-right: 10px;
             }
+          }
         }
 
-        .icon{
-            position:absolute;
-            right: -75px;
-            bottom: -75px;
-            background-color: rgb(0,47,73, 0.8);
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
+        .icon {
+          position: absolute;
+          right: -75px;
+          bottom: -75px;
+          background-color: rgb(0, 47, 73, 0.8);
+          border-radius: 50%;
+          width: 150px;
+          height: 150px;
 
-            svg{
-                background-color: transparent;
-                width: 40px;
-                color: red;
-                position: absolute;
-                left: 25px;
-                top: -25px;
-            }
+          svg {
+            background-color: transparent;
+            width: 40px;
+            color: red;
+            position: absolute;
+            left: 25px;
+            top: -25px;
+          }
         }
 
+        &:hover {
+          background-color: #fff;
 
+          span {
+            color: rgba(0, 0, 0, 0.1);
+          }
 
-        &:hover{
-            background-color:#fff;
+          h6,
+          p {
+            color: #000;
+          }
 
-            span{
-                color: rgba(0,0,0,0.1);
+          .icon {
+            background-color: rgb(246, 127, 0, 0.9);
+            svg {
+              background-color: transparent;
             }
-
-            h6, p{
-                color: #000;
-            }
-
-            .icon{
-                background-color: rgb(246,127,0, 0.9);
-                svg{
-                    background-color: transparent;
-                }
-            }
+          }
         }
       }
     }
   }
 
-  
+  @media (max-width: 650px) {
+    .wrap {
+      .title {
+        font-size: 32px;
+        width: 100% !important;
+      }
+
+      .cards {
+        flex-direction: column;
+      }
+    }
+  }
 `;
 
-const BottomStyle=styled.div`
-.bottom{
+const BottomStyle = styled.div`
+  .bottom {
     display: flex;
     gap: 30px;
     transform: translateY(-50%);
 
+    .twoCard {
+      padding: 30px 50px;
+      background-image: url("images/bg-counter-1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
 
-    .twoCard{
-        padding: 30px 50px;
-        background-image: url("images/bg-counter-1.jpg");
-        background-repeat: no-repeat;
-  background-size: cover;
+      .count {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 800;
+      }
 
-        .count{
-            color: #fff;
-            font-size: 48px;
-            font-weight: 800;
-        }
+      .title {
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 30px;
+      }
 
-        .title{
-            color: #FFFFFF;
-    font-size: 22px;
-    line-height: 30px;
-        }
-
-        .descr{
-            width: 80%;
-            color: #FFFFFF;
-            font-size: 16px;
-            line-height: 28px;
-        }
+      .descr {
+        width: 80%;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 28px;
+      }
     }
   }
-`
+
+  @media (max-width: 650px) {
+    .bottom{
+      flex-direction: column;
+      transform: translateY(-25%);
+
+      .twoCard{
+        .count{
+          font-size: 32px !important;
+        }
+
+        .title {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+      .descr {
+        width: 100%;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 18px;
+      }
+      }
+    }
+  }
+`;
 
 export { ThirdSectionWrapper, BottomStyle };

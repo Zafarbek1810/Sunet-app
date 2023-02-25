@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const BannerWrapper = styled.div`
-  background-image:url("images/banner2.jpg");
+  background-image: url("images/banner2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 100vh;
@@ -60,8 +60,8 @@ const BannerWrapper = styled.div`
       text-transform: uppercase;
       transition: 300ms;
 
-      &:hover{
-        background:#002F49;
+      &:hover {
+        background: #002f49;
       }
     }
 
@@ -81,10 +81,60 @@ const BannerWrapper = styled.div`
         cursor: pointer;
         transition: 300ms;
 
-        &:hover{
+        &:hover {
           color: #f67f00;
         }
       }
+    }
+  }
+
+  @media (max-width: 650px) {
+    background-position: center center;
+    .wrap {
+      height: 600px !important;
+
+      .subtitle {
+        line-height: 22px;
+        font-weight: 400;
+        font-size: 16px !important;
+      }
+
+      .title {
+        max-width: 90%;
+        line-height: 60px;
+        font-weight: 900;
+        font-size: 48px !important;
+      }
+
+      .desc {
+        font-family: "Nunito Sans";
+        color: #fff;
+        max-width: 75%;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      a {
+        padding: 15px 25px;
+        font-size: 14px;
+      }
+
+      .slidePage {
+      margin-top: 40px;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 15px;
+      font-family: "Nunito sans";
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        
+      }
+    }
     }
   }
 `;
@@ -148,8 +198,8 @@ const BannerWrapper2 = styled.div`
       text-transform: uppercase;
       transition: 300ms;
 
-      &:hover{
-        background:#002F49;
+      &:hover {
+        background: #002f49;
       }
     }
 
@@ -169,10 +219,60 @@ const BannerWrapper2 = styled.div`
         cursor: pointer;
         transition: 300ms;
 
-        &:hover{
+        &:hover {
           color: #f67f00;
         }
       }
+    }
+  }
+  @media (max-width: 650px) {
+    background-position: center center;
+
+    .wrap {
+      height: 600px !important;
+
+      .subtitle {
+        line-height: 22px;
+        font-weight: 400;
+        font-size: 16px !important;
+      }
+
+      .title {
+        max-width: 90%;
+        line-height: 60px;
+        font-weight: 900;
+        font-size: 48px !important;
+      }
+
+      .desc {
+        font-family: "Nunito Sans";
+        color: #fff;
+        max-width: 75%;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      a {
+        padding: 15px 25px;
+        font-size: 14px;
+      }
+
+      .slidePage {
+      margin-top: 40px;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 15px;
+      font-family: "Nunito sans";
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        
+      }
+    }
     }
   }
 `;
@@ -236,8 +336,8 @@ const BannerWrapper3 = styled.div`
       text-transform: uppercase;
       transition: 300ms;
 
-      &:hover{
-        background:#002F49;
+      &:hover {
+        background: #002f49;
       }
     }
 
@@ -257,10 +357,61 @@ const BannerWrapper3 = styled.div`
         cursor: pointer;
         transition: 300ms;
 
-        &:hover{
+        &:hover {
           color: #f67f00;
         }
       }
+    }
+  }
+
+  @media (max-width: 650px) {
+    background-position: center center;
+
+    .wrap {
+      height: 600px !important;
+
+      .subtitle {
+        line-height: 22px;
+        font-weight: 400;
+        font-size: 16px !important;
+      }
+
+      .title {
+        max-width: 90%;
+        line-height: 60px;
+        font-weight: 900;
+        font-size: 48px !important;
+      }
+
+      .desc {
+        font-family: "Nunito Sans";
+        color: #fff;
+        max-width: 75%;
+        line-height: 20px;
+        font-weight: 400;
+        font-size: 14px;
+      }
+
+      a {
+        padding: 15px 25px;
+        font-size: 14px;
+      }
+
+      .slidePage {
+      margin-top: 40px;
+      width: 25%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      font-size: 15px;
+      font-family: "Nunito sans";
+      svg {
+        width: 20px !important;
+        height: 20px !important;
+        
+      }
+    }
     }
   }
 `;

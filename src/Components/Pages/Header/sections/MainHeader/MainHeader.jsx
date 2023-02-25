@@ -3,27 +3,32 @@ import MyLink from "../../../../Common/MyLink";
 import Container from "../../../../Common/Container";
 import BurgerList from "./Components/BurgerList";
 import { HeaderContext } from "../../../../../Context/HeaderContext";
-import {MainHeaderWrapper} from "./MainHeaderWrapper"
+import { MainHeaderWrapper } from "./MainHeaderWrapper";
+import useWindowDimensions from "../../../../../Hooks/useWindow";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
+import { useContextSelector } from "use-context-selector";
+import { ModalContext } from "../../../../../Context/ModalContext/Context";
 
 export const LINKS = [
   {
     name: "About us",
     path: "/about",
     id: 1,
-      dropMenu: [
+    dropMenu: [
       {
         title: "Our history",
-        path: "/#services",
+        path: "/about/our-history",
         id: 1.1,
       },
       {
-        title: "Mission",
-        path: "/#services",
+        title: "Mission & Vision",
+        path: "/about/mission",
         id: 1.2,
       },
       {
         title: "Values",
-        path: "/#services",
+        path: "/about/values",
         id: 1.3,
       },
     ],
@@ -32,7 +37,7 @@ export const LINKS = [
     name: "Services",
     path: "/",
     id: 2,
-      dropMenu: [
+    dropMenu: [
       {
         title: "How do we work",
         path: "/#services",
@@ -43,7 +48,6 @@ export const LINKS = [
         path: "/#services",
         id: 2.2,
       },
-      
     ],
   },
   {
@@ -78,10 +82,9 @@ export const LINKS = [
       },
       {
         title: "FAQ",
-        path: "/#services",
+        path: "/faq",
         id: 4.5,
       },
-      
     ],
   },
   {
@@ -111,46 +114,24 @@ export const LINKS = [
     ],
     id: 6,
   },
-  // {
-  //   name: "Contact us",
-  //   path: "/contact",
-  //   id: 7,
-  // },
-  // {
-  //   name: "Pages",
-  //   path: "/",
-  //   dropMenu: [
-  //     {
-  //       title: "page 1",
-  //       path: "/#services",
-  //       id: 2.1,
-  //     },
-  //     {
-  //       title: "Page 2",
-  //       path: "/#services",
-  //       id: 2.2,
-  //     },
-  //     {
-  //       title: "Page 3",
-  //       path: "/#services",
-  //       id: 2.3,
-  //     },
-  //   ],
-  //   id: 2,
-  // },
-  
 ];
 
 const MainHeader = ({ isFixed }) => {
   const [header, setHeader] = useState("header");
   const { burger, handleBurger, setBurger } = useContext(HeaderContext);
   const ref = useRef(null);
+  const width = useWindowDimensions();
+
+  const setIsModalVisible = useContextSelector(
+    ModalContext,
+    (state) => state[1]
+  );
 
   useEffect(() => {
     const listenScrollEvent = () => {
-      if (window.scrollY < 40) {
+      if (window.scrollY < 180) {
         return setHeader("header");
-      } else if (window.scrollY > 40) {
+      } else if (window.scrollY > 180) {
         return setHeader("header2");
       }
     };
@@ -177,8 +158,20 @@ const MainHeader = ({ isFixed }) => {
     <MainHeaderWrapper ref={ref} isFixed={isFixed}>
       <div className={`content ${header}`}>
         <div className="logo">
-          <MyLink to="/" onClick={() => setBurger(false)}>
-            <span>SUN</span>ET
+          <MyLink to="/" onClick={() => setBurger(p => !p)}>
+            <img
+              src={
+                width > 991
+                  ? header !== "header"
+                    ? `/images/logo2.png`
+                    : isFixed
+                    ? `/images/logo2.png`
+                    : `/images/logo2.png`
+                  : `/images/logo2.png`
+              }
+              width={100}
+              height={72}
+            />
           </MyLink>
         </div>
         <Container className="navbar-wrapper">
@@ -187,14 +180,13 @@ const MainHeader = ({ isFixed }) => {
               <li key={id}>
                 <MyLink to={path}>
                   <div className="navs">
-                   
                     <p>{name}</p>
-                    {/* {dropMenu && (
+                    {dropMenu && (
                       <FontAwesomeIcon
                         className="angle-svg"
                         icon={faAngleDown}
                       />
-                    )} */}
+                    )}
                   </div>
                 </MyLink>
                 {dropMenu && (
@@ -203,8 +195,10 @@ const MainHeader = ({ isFixed }) => {
                       {dropMenu.map((drop, idx) => (
                         <li key={idx} className="dropdown__item">
                           <MyLink to={drop.path} className="dropdown__link">
-                            {/* <FontAwesomeIcon icon={faArrowRight} /> */}
-                            <span>{drop.title}</span>
+                            <span>
+                              <div className="spanIn">||</div>
+                              {drop.title}
+                            </span>
                           </MyLink>
                         </li>
                       ))}
@@ -231,7 +225,7 @@ const MainHeader = ({ isFixed }) => {
         >
           <span></span>
         </div>
-        <BurgerList burger={burger}  />
+        <BurgerList burger={burger} />
       </div>
     </MainHeaderWrapper>
   );

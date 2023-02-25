@@ -37,6 +37,20 @@ const FifthSectionWrapper=styled.div`
     line-height: 60px;
     
   }
+
+  @media (max-width: 650px) {
+    padding: 30px;
+    .subtitle{
+      font-size: 16px;
+    }
+    .wrap{
+      flex-direction: column;
+
+      .title{
+        font-size: 32px;
+      }
+    }
+  }
 `
 
 export{FifthSectionWrapper}

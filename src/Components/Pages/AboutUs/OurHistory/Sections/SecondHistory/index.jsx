@@ -11,7 +11,7 @@ const SecondHistory = () => {
             <img src="/images/project.jpg" alt="" />
           </div>
           <div className="right">
-            <h4>WHY CHOOSE US</h4>
+            <h4>WHO WE ARE</h4>
 
             <h2>History of company</h2>
 
