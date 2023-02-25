@@ -14,8 +14,10 @@ a {
 }
 
 * {
+  scroll-behavior: smooth !important;
   box-sizing: border-box;
 }
+
 
 
 @font-face {
@@ -142,6 +144,34 @@ a {
   font-weight: 300;
   font-style: italic;
   font-display: swap;
+}
+
+
+.ant-message {
+  z-index: 999990 !important;
+}
+
+.ant-modal-body{
+    padding: 0;
+    border-radius: 10px !important;
+}
+
+.ant-modal-wrap {
+  position: relative;
+  z-index: 9999 !important;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.ant-modal-footer {
+  display: none;
+}
+
+.ant-checkbox-wrapper{
+    margin-left: 0 !important;
+}
+
+.ant-modal-content{
+  padding: 0 !important;
 }
 
 

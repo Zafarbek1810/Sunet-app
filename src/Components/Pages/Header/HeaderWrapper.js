@@ -12,7 +12,7 @@ const HeaderWrapper = styled.div`
     color: #000;
     letter-spacing: 10px;
     font-family: sans-serif;
-    width: 17%;
+    width: 15%;
 
     img {
       width: 100% !important;
@@ -41,13 +41,12 @@ const HeaderWrapper = styled.div`
   .header {
     background-color: #fff;
     position: absolute;
-    /* top: 20px; */
     left: 0;
     right: 0;
-    transform: translateY(0);
-    transition: transform 0.6s ease;
+    transform: translateY(-10px);
+    transition: transform 0.3s ease !important;
     z-index: 999;
-    height: 100px;
+    height: 100px !important;
 
     .navs {
       p {
@@ -69,20 +68,20 @@ const HeaderWrapper = styled.div`
     }
 
     .myDefaultButton {
-      background: transparent;
-      color: #000;
+      background: #002F49;
+      color: #fff;
       font-weight: 700;
       font-family: Nunito Sans;
       text-transform: uppercase;
-      border: 2px solid #000;
-      padding: 10px 20px;
-      width: 250px;
+      border: none;
+      padding:20px 10px;
+      width: 200px;
       transition: 300ms;
-      border-radius: 5px;
 
       &:hover {
         background-color: #fff;
         color: #000;
+        border: 1px solid #002F49;
       }
     }
   }
@@ -95,7 +94,7 @@ const HeaderWrapper = styled.div`
     right: 0;
     z-index: 5555;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-    transition: 1s ease !important;
+    transition: 0.3s ease-out !important;
     height: 100px;
     font-family: sans-serif;
 
@@ -116,15 +115,21 @@ const HeaderWrapper = styled.div`
     }
 
     .myDefaultButton {
-      background: transparent;
-      color: white;
-      font-family: sans-serif;
+      background: #002F49;
+      color: #fff !important;
       font-weight: 700;
+      font-family: Nunito Sans;
       text-transform: uppercase;
-      border: 2px solid #fff;
-      padding: 10px 20px;
-      width: 250px;
-      border-radius: 5px;
+      border: none;
+      padding:20px 10px;
+      width: 200px;
+      transition: 300ms;
+
+      &:hover {
+        background-color: #fff;
+        color: #000 !important;
+        border: 1px solid #002F49;
+      }
     }
 
     a,
@@ -194,9 +199,7 @@ const HeaderWrapper = styled.div`
     justify-content: space-between;
     /* position: relative; */
 
-    img {
-      width: 230px;
-    }
+  
 
     .links_cont {
       display: flex;

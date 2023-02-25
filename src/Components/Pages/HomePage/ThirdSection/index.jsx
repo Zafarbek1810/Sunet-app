@@ -48,7 +48,7 @@ const ThirdSection = () => {
       <ThirdSectionWrapper>
         <Container>
           <div className="wrap">
-            <p className="subtitle">// WHY CHOOSE US</p>
+            <p className="subtitle"> WHY CHOOSE US</p>
             <h3 className="title">
               Design the Concept of Your Business Idea Now
             </h3>

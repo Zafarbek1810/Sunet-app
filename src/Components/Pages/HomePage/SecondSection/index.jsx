@@ -11,7 +11,7 @@ const SecondSection = () => {
              
       <section>
         <div className="left">
-          <h4>// About Company</h4>
+          <h4> About Company</h4>
 
           <h2>Your Partner for Software Innovation</h2>
 

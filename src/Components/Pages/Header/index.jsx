@@ -19,17 +19,17 @@ export const LINKS = [
     dropMenu: [
       {
         title: "Our history",
-        path: "/#services",
+        path: "/about/our-history",
         id: 1.1,
       },
       {
-        title: "Mission",
-        path: "/#services",
+        title: "Mission & Vision",
+        path: "/about/mission",
         id: 1.2,
       },
       {
         title: "Values",
-        path: "/#services",
+        path: "/about/values",
         id: 1.3,
       },
     ],
@@ -165,11 +165,11 @@ const Header = ({ isFixed }) => {
               src={
                 width > 991
                   ? header !== "header"
-                    ? `images/logo2.png`
+                    ? `/images/logo2.png`
                     : isFixed
-                    ? `images/logo2.png`
-                    : `images/logo2.png`
-                  : `images/logo2.png`
+                    ? `/images/logo2.png`
+                    : `/images/logo2.png`
+                  : `/images/logo2.png`
               }
               width={100}
               height={72}
@@ -198,7 +198,7 @@ const Header = ({ isFixed }) => {
                         <li key={idx} className="dropdown__item">
                           <MyLink to={drop.path} className="dropdown__link">
                             <span>
-                              <div className="spanIn">//</div>
+                              <div className="spanIn">||</div>
                               {drop.title}
                             </span>
                           </MyLink>
@@ -212,14 +212,14 @@ const Header = ({ isFixed }) => {
           </ul>
         </Container>
 
-        {/* <button
+        <button
           onClick={() => {
             setIsModalVisible((p) => !p);
           }}
           className="myDefaultButton getBtn"
         >
           Get in Touch
-        </button> */}
+        </button>
 
         <div
           onClick={handleBurger}

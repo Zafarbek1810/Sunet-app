@@ -3,6 +3,7 @@ import styled from "styled-components";
 const TopHeaderWrapper = styled.div`
   background-color: #002f49;
   color: white;
+  padding-bottom: 10px;
 
   .content {
     height: 40px !important;

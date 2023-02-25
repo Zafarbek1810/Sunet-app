@@ -7,7 +7,7 @@ const FourthSection = () => {
   return (
     <FourthWrapper>
       <Container>
-        <h4 className="top-tit">// OUR SERVICE</h4>
+        <h4 className="top-tit"> OUR SERVICE</h4>
 
         <h2 className="title">We Offer a Wide <br /> Variety of IT Services</h2>
 

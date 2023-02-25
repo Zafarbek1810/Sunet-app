@@ -22,6 +22,7 @@
     "react-countup": "^6.4.1",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.2",
+    "react-phone-number-input": "^3.2.19",
     "sass": "^1.58.3",
     "styled-components": "^5.3.6",
     "use-context-selector": "^1.4.1"
