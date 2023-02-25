@@ -83,7 +83,7 @@ export const LINKS = [
       },
       {
         title: "FAQ",
-        path: "/#services",
+        path: "/faq",
         id: 4.5,
       },
     ],
