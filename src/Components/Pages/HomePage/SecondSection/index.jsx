@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { FaRegular, faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import Container from "../../../Common/Container";
 import { SecondSectionWrapper } from "./SecondSection.style";
