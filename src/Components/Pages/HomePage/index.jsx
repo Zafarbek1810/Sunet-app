@@ -6,6 +6,7 @@ import FourthSection from './FourthSection';
 import FifthSection from './FifthSection';
 import SecondSection from './SecondSection';
 import ThirdSection from './ThirdSection';
+import Brands from './Brands';
 
 const HomePage = () => {
     return (
@@ -13,6 +14,7 @@ const HomePage = () => {
             <Header/>
             <div className="main-content">
                 <Banner/>
+                <Brands/>
                 <SecondSection/>
                 <ThirdSection/>
                 <FourthSection />

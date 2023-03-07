@@ -20,18 +20,19 @@ z-index: 1000011111 !important;
       color: black;
       padding: 30px;
 
-      h3.title {
+      h3 {
         width: 60%;
         margin: auto;
         text-align: center;
         font-size: 24px;
-        font-weight: 600;
+        font-weight: 607;
       }
 
       p.subtitle {
         width: 100%;
         text-align: center;
         margin-bottom: 15px;
+        font-weight: 600;
         a {
           color: #222;
           &:hover {
@@ -52,6 +53,7 @@ z-index: 1000011111 !important;
 
           .label {
             width: 40%;
+            font-weight: 600;
             
             @media (max-width: 767px) {
               width: 100%;
@@ -79,11 +81,13 @@ z-index: 1000011111 !important;
         font-size: 15px;
         position: relative;
         width: 50%;
+        font-weight: 600 !important;
         
 
         .email{
           width: 200%;
           font-family: Nunito sans;
+          font-weight: 600;
         }
 
         .message {
@@ -122,7 +126,7 @@ z-index: 1000011111 !important;
         width: 100%;
         padding: 10px 18px 10px 40px;
         font-size: 14px;
-        font-weight: 400;
+        font-weight: 600;
         font-family: Nunito sans;
 
         /* &:focus {
@@ -186,6 +190,7 @@ z-index: 1000011111 !important;
           padding: 10px 0;
           margin-top: 0;
           font-family: Nunito sans;
+          font-weight: 600;
         }
       }
     }
@@ -224,7 +229,7 @@ z-index: 1000011111 !important;
     .link {
       transition: 500ms;
       /* margin-top: 10px; */
-      font-weight: 100;
+      font-weight: 400;
       color: #fff;
     }
 

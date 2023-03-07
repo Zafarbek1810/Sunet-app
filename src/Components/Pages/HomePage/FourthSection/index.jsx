@@ -1,7 +1,50 @@
 import React from "react";
 import Container from "../../../Common/Container";
+import AdaptingSvg from "../../../Common/Svg/AdaptingSvg";
+import BuldingTeamSvg from "../../../Common/Svg/BuldingTeamSvg";
 import CompSvg from "../../../Common/Svg/CompSvg";
+import ContinuousSupSvg from "../../../Common/Svg/ContinuousSupSvg";
+import FoundationSvg from "../../../Common/Svg/FoundationSvg";
+import OperationsSvg from "../../../Common/Svg/OperationsSvg";
+import WorkspaceSvg from "../../../Common/Svg/WorkspaceSvg";
 import { FourthWrapper } from "./fourthsec.style";
+
+const cardData = [
+  {
+    title: "Continuous Support",
+    descr:
+      "24-hour/365 days dedicated IT support and robust infrastructure for maximum uptime.",
+    icon: <ContinuousSupSvg />,
+  },
+  {
+    title: "Building your dream team",
+    descr: "Local dedicated talent acquisition to build and scale your team.",
+    icon: <BuldingTeamSvg />,
+  },
+  {
+    title: "Hassle-free Workspace",
+    descr:
+      "Fully maintained facilities so you never have to worry about furniture, tech equipment, or maintenance.",
+    icon: <WorkspaceSvg />,
+  },
+  {
+    title: "Adapting to evolving needs.",
+    descr:
+      "Constant professional development and upgrade skills of your service provider.",
+    icon: <AdaptingSvg />,
+  },
+  {
+    title: "Ensuring Seamless Operations",
+    descr:
+      "Risk management and disaster recovery plans to keep your team safe and your business running.",
+    icon: <OperationsSvg />,
+  },
+  {
+    title: "Building a strong foundation",
+    descr: "Training for each position and constant quality assurance.",
+    icon: <FoundationSvg />,
+  },
+];
 
 const FourthSection = () => {
   return (
@@ -10,88 +53,22 @@ const FourthSection = () => {
         <h4 className="top-tit"> OUR SERVICE</h4>
 
         <h2 className="title">
-          We Offer a Wide <br /> Variety of IT Services
+        Our Services Involve
         </h2>
 
         <div className="box-wrapper">
-          <div className="box">
-            <div className="box-img">
-              <CompSvg />
-            </div>
+          {cardData.map((v, i) => (
+            <div className="box" key={i}>
+              <div className="box-img">
+                {v.icon}
+              </div>
 
-            <div className="box-tit">
-              <h3>Web Development</h3>
-              <p>
-                We carry more than just good coding skills. Our experience makes
-                us stand out from other web development.
-              </p>
+              <div className="box-tit">
+                <h3>{v.title}</h3>
+                <p>{v.descr}</p>
+              </div>
             </div>
-          </div>
-          <div className="box">
-            <div className="box-img">
-              <CompSvg />
-            </div>
-
-            <div className="box-tit">
-              <h3>Mobile Development</h3>
-              <p>
-                Create complex enterprise software, ensure reliable software
-                integration, modernise your legacy system.
-              </p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="box-img">
-              <CompSvg />
-            </div>
-
-            <div className="box-tit">
-              <h3>QA & Testing</h3>
-              <p>
-                Turn to our experts to perform comprehensive, multi-stage
-                testing and auditing of your software.
-              </p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="box-img">
-              <CompSvg />
-            </div>
-
-            <div className="box-tit">
-              <h3>IT Counsultancy</h3>
-              <p>
-                Trust our top minds to eliminate workflow pain points, implement
-                new tech, and consolidate app portfolios.
-              </p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="box-img">
-              <CompSvg />
-            </div>
-
-            <div className="box-tit">
-              <h3>UI/UX Design</h3>
-              <p>
-                Build the product you need on time with an experienced team that
-                uses a clear and effective design process.
-              </p>
-            </div>
-          </div>
-          <div className="box">
-            <div className="box-img">
-              <CompSvg />
-            </div>
-
-            <div className="box-tit">
-              <h3>Dedicated Team</h3>
-              <p>
-                Build the product you need on time with an experienced team that
-                uses a clear and effective design process.
-              </p>
-            </div>
-          </div>
+          ))}
         </div>
 
         <div></div>

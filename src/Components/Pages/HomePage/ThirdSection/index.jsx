@@ -9,36 +9,37 @@ import CountUp from "react-countup";
 import Container from "../../../Common/Container";
 import MyLink from "../../../Common/MyLink";
 import CompSvg from "../../../Common/Svg/CompSvg";
+import ProcesSvg from "../../../Common/Svg/ProcesSvg";
+import QualitySvg from "../../../Common/Svg/QualitySvg";
+import ReadySvg from "../../../Common/Svg/ReadySvg";
+import WorkerSvg from "../../../Common/Svg/WorkerSvg";
 import { BottomStyle, ThirdSectionWrapper } from "./ThirdSection.style";
 
 const card = [
   {
     id: "01",
-    title: "Product Design",
-    descr:
-      "Our product design service lets you prototype, test and validate your ideas",
-    icon: <CompSvg />,
+    title: "Quick Preparation",
+    descr: "Get your project ready to delegate.",
+    icon: <ReadySvg />,
   },
   {
     id: "02",
-    title: "Development",
-    descr:
-      "Our product design service lets you prototype, test and validate your ideas.",
-    icon: <CompSvg />,
+    title: "Easy Selection",
+    descr: "Select your employee for this task.",
+    icon: <WorkerSvg />,
   },
   {
     id: "03",
-    title: "Data Analytics",
-    descr:
-      "Our product design service lets you prototype, test and validate your ideas.",
-    icon: <CompSvg />,
+    title: "All In One",
+    descr: "Recruit, hire, train, involve in work with us.",
+    icon: <ProcesSvg />,
   },
   {
     id: "04",
-    title: "Cyber Security",
+    title: "Quality Assured",
     descr:
-      "Our product design service lets you prototype, test and validate your ideas.",
-    icon: <CompSvg />,
+      "Make sure work is done according to our customized quality assurance program.",
+    icon: <QualitySvg />,
   },
 ];
 
@@ -49,16 +50,14 @@ const ThirdSection = () => {
         <Container>
           <div className="wrap">
             <p className="subtitle"> WHY CHOOSE US</p>
-            <h3 className="title">
-              Design the Concept of Your Business Idea Now
-            </h3>
+            <h3 className="title">Why Companies Choose SUNET</h3>
             <div className="cards">
               {card.map((v, i) => (
                 <div key={i} className="card">
                   <span>{v.id}</span>
                   <h6>{v.title}</h6>
                   <p>{v.descr}</p>
-                  <MyLink to="/#" className="link">
+                  <MyLink to="/services/how-we-work" className="link">
                     <FontAwesomeIcon icon={faArrowRight} />
                     Learn More
                   </MyLink>
@@ -71,28 +70,28 @@ const ThirdSection = () => {
       </ThirdSectionWrapper>
       <BottomStyle>
         <Container>
-        <div className="bottom">
-          <div className="twoCard">
-            <div className="count">
-              <CountUp end={15} duration={2} suffix="+" />
+          <div className="bottom">
+            <div className="twoCard1">
+              <div className="count">
+                <CountUp end={20} duration={2} suffix="+" />
+              </div>
+              <h4 className="title">Industries</h4>
+              <p className="descr">
+                We have relevant experience and expertise in more than twenty
+                industies.
+              </p>
             </div>
-            <h4 className="title">Countries Worldwide</h4>
-            <p className="descr">
-              To succeed, every software solution must be deeply integrated into
-              the existing tech environment..
-            </p>
-          </div>
-          <div className="twoCard">
-            <div className="count">
-              <CountUp end={23} duration={2} suffix="k" />
+            <div className="twoCard2">
+              <div className="count">
+                <CountUp end={100} duration={2} suffix="+" />
+              </div>
+              <h4 className="title">Current Positions </h4>
+              <p className="descr">
+                The positions are covered from document processing to call
+                centers and analytics.
+              </p>
             </div>
-            <h4 className="title">Happy Customers</h4>
-            <p className="descr">
-              To succeed, every software solution must be deeply integrated into
-              the existing tech environment..
-            </p>
           </div>
-        </div>
         </Container>
       </BottomStyle>
     </>

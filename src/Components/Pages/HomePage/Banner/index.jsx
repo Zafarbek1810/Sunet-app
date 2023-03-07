@@ -3,9 +3,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Carousel } from "antd";
 import Aos from "aos";
 import React, { useEffect, useRef } from "react";
+import AnimatedText from "react-animated-text-content";
 import Container from "../../../Common/Container";
 import MyLink from "../../../Common/MyLink";
-import { BannerWrapper, BannerWrapper2, BannerWrapper3 } from "./Banner.style";
+import { BannerWrapper, BannerWrapper2 } from "./Banner.style";
 
 const Banner = () => {
   useEffect(() => {
@@ -23,31 +24,50 @@ const Banner = () => {
 
   const handlePrev = () => carouselRef.current.prev();
 
-
-  //   useEffect(() => {
-  //     const handleNext = () => carouselRef.current.next();
-  //     setTimeout(() => {
-  //       handleNext();
-  //     }, 1000);
-  //   }, []);
-
   return (
-    <Carousel effect="fade"  ref={carouselRef} dots={false}>
+    <Carousel
+      autoplay
+      autoplaySpeed={3500}
+      effect="fade"
+      easing
+      ref={carouselRef}
+      dots={false}
+    >
       <div>
         <BannerWrapper>
           <Container>
             <div className="wrap">
-              <h4 className="subtitle">Full Cucle Software Development</h4>
-              <h1 className="title">From Idea to Product</h1>
+              <h1 className="title">
+              <AnimatedText
+                type="chars" // animate words or chars
+                animation={{
+                  x: "200px",
+                  y: "-20px",
+                  scale: 1.1,
+                  ease: "ease-in-out",
+                }}
+                animationType="wave"
+                interval={0.06}
+                duration={1}
+                tag="p"
+                className="animated-paragraph"
+                includeWhiteSpaces
+                threshold={0.1}
+                rootMargin="20%"
+              >
+                Best match found
+              </AnimatedText>
+              </h1>
               <p className="desc">
-                We are 100+ professional software engineers with more than. 10
-                years of experience in delivering superior products.
+                The best possible match for your job, for your project’s
+                completion on time and with no flaws.
               </p>
-              <MyLink to="/#">Learn More</MyLink>
-
+              <div className="item">
+                <MyLink to="/services/how-we-work">Learn More</MyLink>
+              </div>
               <div className="slidePage">
                 <FontAwesomeIcon icon={faArrowLeft} onClick={handlePrev} />
-                01/03
+                01/02
                 <FontAwesomeIcon icon={faArrowRight} onClick={handleNext} />
               </div>
             </div>
@@ -57,44 +77,44 @@ const Banner = () => {
       <div>
         <BannerWrapper2>
           <Container>
-          <div className="wrap">
-              <h4 className="subtitle"> Full Cucle Software Development</h4>
-              <h1 className="title">From Idea to Product</h1>
+            <div className="wrap">
+            <h1 className="title">
+              <AnimatedText
+                type="words" // animate words or chars
+                animation={{
+                  x: "200px",
+                  y: "-20px",
+                  scale: 1.1,
+                  ease: "ease-in-out",
+                }}
+                animationType="float"
+                interval={0.06}
+                duration={1.5}
+                tag="p"
+                className="animated-paragraph"
+                includeWhiteSpaces
+                threshold={0.1}
+                rootMargin="20%"
+              >
+                concentrate on your job
+              </AnimatedText>
+              </h1>
               <p className="desc">
-                We are 100+ professional software engineers with more than. 10
-                years of experience in delivering superior products.
+                To excel, grow and provide a diversity of positions to our
+                workforce, while serving you at our best.
               </p>
-              <MyLink to="/#">Learn More</MyLink>
+              <div className="item">
+                <MyLink to="/services/how-we-work">Learn More</MyLink>
+              </div>
 
               <div className="slidePage">
-                <FontAwesomeIcon icon={faArrowLeft} onClick={handlePrev}/>
-                02/03
-                <FontAwesomeIcon icon={faArrowRight} onClick={handleNext}/>
+                <FontAwesomeIcon icon={faArrowLeft} onClick={handlePrev} />
+                02/02
+                <FontAwesomeIcon icon={faArrowRight} onClick={handleNext} />
               </div>
             </div>
           </Container>
         </BannerWrapper2>
-      </div>
-      <div>
-        <BannerWrapper3>
-          <Container>
-          <div className="wrap">
-              <h4 className="subtitle">Full Cucle Software Development</h4>
-              <h1 className="title">From Idea to Product</h1>
-              <p className="desc">
-                We are 100+ professional software engineers with more than. 10
-                years of experience in delivering superior products.
-              </p>
-              <MyLink to="/#">Learn More</MyLink>
-
-              <div className="slidePage">
-                <FontAwesomeIcon icon={faArrowLeft} onClick={handlePrev} />
-                03/03
-                <FontAwesomeIcon icon={faArrowRight} onClick={handleNext}/>
-              </div>
-            </div>
-          </Container>
-        </BannerWrapper3>
       </div>
     </Carousel>
   );

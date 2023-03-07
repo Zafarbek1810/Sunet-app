@@ -98,6 +98,16 @@ padding: 75px 0;
 
     }
 }
+
+@media (max-width: 650px) {
+    .wrap{
+      flex-direction: column;
+
+      .left, .right{
+        width: 100%;
+      }
+    }
+  }
 `;
 
 export { SecondHistoryWrapper };

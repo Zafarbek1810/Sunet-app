@@ -86,6 +86,21 @@ const SecondMissionWrapper = styled.div`
         }
       }
     }
+
+
+    @media (max-width: 650px) {
+        .wrap{
+          flex-direction: column-reverse;
+
+          .left, .right{
+            width: 100%;
+          }
+
+          .visionIm{
+            display: none;
+          }
+        }
+    }
   
 `;
 

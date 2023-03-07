@@ -81,18 +81,22 @@ const ThirdHistoryWrapper = styled.div`
     display: flex;
     align-items: center;
     gap: 40px;
+    padding: 40px 0;
     .left{
       width: 50%;
       h3{
-        font-weight: 700;
-        color: #1b1d21;
-        font-size: 24px;
-        font-family: Nunito sans;
+        font-size: 44px;
+      margin: 0;
+      line-height: 52px;
+      font-weight: 800;
+      font-family: "Nunito Sans";
     }
     p{
-        font-family: "Nunito Sans";
-    color: #6d6d6d;
-    font-size: 18px;
+      font-size: 18px;
+      color: #6d6d6d;
+      font-weight: 400;
+      line-height: 30px;
+      font-family: "Nunito Sans";
     }
     ul {
         padding: 0;
@@ -138,6 +142,26 @@ const ThirdHistoryWrapper = styled.div`
       width: 50%;
 
       img{
+        width: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 650px) {
+    .top{
+      width: 100%;
+    }
+
+    .cards{
+      .card{
+        width: 100%;
+      }
+    }
+
+    .bottom{
+      flex-direction: column-reverse;
+
+      .left, .right{
         width: 100%;
       }
     }

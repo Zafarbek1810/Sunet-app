@@ -247,7 +247,7 @@ const FormModal = () => {
             <div className="submit-btn-wrapper">
               <button className="my-default-button submit-btn">
                 {isLoading && <Loading />}
-                <span>Get started</span>
+                <span>Send Message</span>
               </button>
             </div>
 

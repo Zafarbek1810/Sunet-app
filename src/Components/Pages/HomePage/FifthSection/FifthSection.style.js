@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 const FifthSectionWrapper=styled.div`
-    background: url("images/bg-cta1-home1.jpg");
+background: linear-gradient(rgba(0, 47, 73, 0.5), rgba(0, 47, 73, 0.5)), url("/images/bg-cta.jpg");
+    /* background: url("/images/bg-cta.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 55px 65px 200px;
+  padding: 35px 65px 180px;
   font-family: Nunito sans;
   margin-bottom: 100px;
 
@@ -13,6 +14,7 @@ const FifthSectionWrapper=styled.div`
     font-size: 20px;
     font-weight: 500;
     text-transform: capitalize;
+    margin: 0;
     margin-bottom: 5px;
   }
 
@@ -21,13 +23,22 @@ const FifthSectionWrapper=styled.div`
     justify-content: space-between;
     align-items: center;
 
-    a{
+    button{
+      background: transparent;
         color: #fff;
         text-transform: uppercase;
         font-size: 14px;
         padding: 20px 35px;
         margin: 0;
         border: 2px solid #fff;
+        transition: 300ms ease;
+
+        &:hover{
+          color: #000;
+          background-color: #fff;
+          font-weight: 600;
+          cursor: pointer;
+        }
     }
   }
 
@@ -35,6 +46,7 @@ const FifthSectionWrapper=styled.div`
     color: #FFFFFF;
     font-size: 48px;
     line-height: 60px;
+    margin: 0;
     
   }
 

@@ -39,8 +39,9 @@ min-height: 100vh;
     padding-right: 60px;
 } 
 .box-img svg{
-    
+    fill: none;
     stroke: #F67F00;
+    stroke-width: 1.5;
 }
 .box-tit h3{
     margin: 0;

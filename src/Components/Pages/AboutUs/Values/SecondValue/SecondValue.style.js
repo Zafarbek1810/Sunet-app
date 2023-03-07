@@ -78,6 +78,25 @@ const SecondValueWrapper=styled.div`
     }
   }
 
+  @media (max-width: 650px) {
+    .top{
+      width: 100%;
+      h4{
+        font-size: 16px;
+      }
+
+      h2{
+        font-size: 24px;
+      }
+
+    }
+    .cards{
+      .card{
+        width: 100%;
+      }
+    }
+  }
+
 `
 
 export{

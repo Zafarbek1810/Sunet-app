@@ -13,7 +13,7 @@ import { ModalContext } from "../../../../../Context/ModalContext/Context";
 export const LINKS = [
   {
     name: "About us",
-    path: "/about",
+    path: "/#",
     id: 1,
     dropMenu: [
       {
@@ -35,80 +35,80 @@ export const LINKS = [
   },
   {
     name: "Services",
-    path: "/",
+    path: "/#",
     id: 2,
     dropMenu: [
       {
         title: "How do we work",
-        path: "/#services",
+        path: "/services/how-we-work",
         id: 2.1,
       },
       {
         title: "Industries we work in",
-        path: "/#services",
+        path: "/#",
         id: 2.2,
       },
     ],
   },
   {
     name: "Our offices",
-    path: "/",
+    path: "/our-offices",
     id: 3,
   },
-  {
-    name: "Resources",
-    path: "/",
-    id: 4,
-    dropMenu: [
-      {
-        title: "Brochures",
-        path: "/#services",
-        id: 4.1,
-      },
-      {
-        title: "Blog",
-        path: "/#services",
-        id: 4.2,
-      },
-      {
-        title: "Case studies",
-        path: "/#services",
-        id: 4.3,
-      },
-      {
-        title: "White papers",
-        path: "/#services",
-        id: 4.4,
-      },
-      {
-        title: "FAQ",
-        path: "/faq",
-        id: 4.5,
-      },
-    ],
-  },
+  // {
+  //   name: "Resources",
+  //   path: "/",
+  //   id: 4,
+  //   dropMenu: [
+  //     {
+  //       title: "Brochures",
+  //       path: "/#",
+  //       id: 4.1,
+  //     },
+  //     {
+  //       title: "Blog",
+  //       path: "/#",
+  //       id: 4.2,
+  //     },
+  //     {
+  //       title: "Case studies",
+  //       path: "/#",
+  //       id: 4.3,
+  //     },
+  //     {
+  //       title: "White papers",
+  //       path: "/#",
+  //       id: 4.4,
+  //     },
+  //     {
+  //       title: "FAQ",
+  //       path: "/faq",
+  //       id: 4.5,
+  //     },
+  //   ],
+  // },
   {
     name: "CSR",
-    path: "/",
+    path: "/csr",
     id: 5,
   },
   {
     name: "Careers",
-    path: "/",
+    path: "/#",
     dropMenu: [
       {
         title: "Equal opportunity employer",
-        path: "/#services",
+        path: "/careers/employer",
         id: 6.1,
       },
       {
         title: "How do we recruit",
-        path: "/#services",
+        path: "/careers/recruit",
         id: 6.2,
       },
       {
         title: "Apply online",
-        path: "/#services",
+        path: "/careers/apply",
         id: 6.3,
       },
     ],

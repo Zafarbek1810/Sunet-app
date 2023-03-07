@@ -31,7 +31,7 @@ const SecondMission = () => {
             </div>
             <div className="imgs" >
               <h4 >Our Vision</h4>
-              <img  src="/images/vision.jpg" alt="" />
+              <img  src="/images/vision.jpg" className="visionIm" alt="" />
             </div>
           </div>
         </div>

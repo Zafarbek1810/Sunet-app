@@ -53,10 +53,7 @@ const SecondSectionWrapper = styled.div`
   .info-element p{
     padding-right: 30px;
   } 
-  .right{
-    width: 50%; 
-    text-align: center;
-  }
+  
   .left h4 {
     margin: 0;
     font-size: 14px;
@@ -143,6 +140,21 @@ const SecondSectionWrapper = styled.div`
     color: #F67F00;
     font-weight: 600;
   }
+
+
+  .right{
+    width: 50%; 
+    position: relative;
+
+    img{
+      width: 140%;
+      height: auto;
+      object-fit: contain;
+    }
+    
+   
+  }
+
 
   @media (max-width: 650px) {
     padding: 30px 0;

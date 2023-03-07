@@ -34,6 +34,12 @@ const BannerMissionWrapper = styled.div`
       margin: 0 5px;
     }
   }
+
+  @media (max-width: 650px) {
+    .wrap{
+      flex-direction: column;
+    }
+  }
 `;
 
 export { BannerMissionWrapper };

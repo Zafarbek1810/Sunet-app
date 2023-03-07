@@ -3,7 +3,6 @@ import styled from "styled-components";
 const MainHeaderWrapper = styled.div`
   background-color: rgba(0, 0, 0, 0.22);
   z-index: 1000;
-
   svg {
       color: #000 !important;
       flex-shrink: 0;
@@ -18,7 +17,7 @@ const MainHeaderWrapper = styled.div`
     color: #000;
     letter-spacing: 10px;
     font-family: sans-serif;
-    width: 15%;
+    width: 14%;
 
     img {
       width: 100% !important;
@@ -44,6 +43,8 @@ const MainHeaderWrapper = styled.div`
     }
   }
 
+  
+
   .header {
     background-color: #fff;
     position: absolute;
@@ -52,7 +53,8 @@ const MainHeaderWrapper = styled.div`
     transform: translateY(-10px);
     transition: transform 0.3s ease !important;
     z-index: 999;
-    height: 100px !important;
+    min-height: 100px !important;
+    padding-top: 10px !important;
 
     .navs {
       p {

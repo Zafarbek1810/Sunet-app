@@ -30,6 +30,10 @@ const ThirdSectionWrapper = styled.div`
       gap: 30px;
 
       .card {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         position: relative;
         border: 1px solid #46416b;
         padding: 40px 30px;
@@ -54,11 +58,12 @@ const ThirdSectionWrapper = styled.div`
           line-height: 30px;
           color: #fff;
           margin-bottom: 10px;
+          text-transform: capitalize !important;
         }
         p {
           color: #fff;
           font-size: 16px;
-          font-weight: 30;
+          font-weight: 400;
         }
 
         .link {
@@ -92,10 +97,10 @@ const ThirdSectionWrapper = styled.div`
 
           svg {
             background-color: transparent;
-            width: 40px;
-            color: red;
+            width: 30px;
+            stroke-width: 1;
             position: absolute;
-            left: 25px;
+            left: 35px;
             top: -25px;
           }
         }
@@ -132,6 +137,10 @@ const ThirdSectionWrapper = styled.div`
 
       .cards {
         flex-direction: column;
+
+        .card{
+          width: 100%;
+        }
       }
     }
   }
@@ -143,11 +152,14 @@ const BottomStyle = styled.div`
     gap: 30px;
     transform: translateY(-50%);
 
-    .twoCard {
+    .twoCard1 {
       padding: 30px 50px;
-      background-image: url("images/bg-counter-1.jpg");
+      background: linear-gradient(rgba(246, 127, 0, 0.4), rgba(246, 127, 0, 0.4)), url("/images/sec3_1.jpg");
       background-repeat: no-repeat;
+      object-fit: cover;
+      background-position: center center;
       background-size: cover;
+      width: 50%;
 
       .count {
         color: #fff;
@@ -169,6 +181,36 @@ const BottomStyle = styled.div`
       }
     }
   }
+    .twoCard2 {
+      padding: 30px 50px;
+      background: linear-gradient(rgba(246, 127, 0, 0.4 ), rgba(246, 127, 0, 0.4 )), url("/images/sec3_2.jpg");
+      /* background-image: url("/images/sec3_2.jpg"); */
+      background-repeat: no-repeat;
+      object-fit: cover;
+      background-position: center center;
+      background-size: cover;
+      width: 50%;
+
+      .count {
+        color: #fff;
+        font-size: 48px;
+        font-weight: 800;
+      }
+
+      .title {
+        color: #ffffff;
+        font-size: 22px;
+        line-height: 30px;
+      }
+
+      .descr {
+        width: 80%;
+        color: #ffffff;
+        font-size: 16px;
+        line-height: 28px;
+      }
+    }
+  
 
   @media (max-width: 650px) {
     .bottom{

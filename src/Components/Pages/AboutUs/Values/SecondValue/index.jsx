@@ -6,32 +6,32 @@ const cardData = [
     {
       title: "Integrity",
       descr:
-        "At SUNET we uphold honesty, ethics, and moral principles even in challenging situations. This is crucial to maintaining trust and credibility with stakeholders.",
+        "Complete, trustworthy, and sound business.",
     },
     {
       title: "Transparency",
       descr:
-        "Operating with openness and honesty in decision-making and communication is the core of our company. By doing so, foster trust and accountability, and allows for constructive feedback and continuous improvement.",
+        "From project proposal and tasks assigned, we will make sure that you job is done with due attention, overseeing each step with our quality assurance policy.",
     },
     {
       title: "Value creation",
       descr:
-        "We are consistently striving to create value for stakeholders through innovative products, services, or processes, which can lead to long-term success and growth for both parties.",
+        "We transform our labor and resources into something that meets the needs of our clients.",
     },
     {
       title: "Professionalism",
       descr:
-        "Maintaining high standards of behavior and expertise, and treating colleagues, clients, and partners with respect and dignity, is essential to creating a positive and productive work environment.",
+        "We know what we do, we learn how you do it and create an office which would meet the needs of your projects, on time and flawlessly.",
     },
     {
       title: "Social responsibility",
       descr:
-        "We acknowledge the impact of our actions on society and the environment, and thus take steps to address them. All this, we consider, is an important aspect of being a responsible corporate citizen.",
+        "As we grow, we make sure communities around us flourish and we create more opportunities to learn, to work, and to thrive for a better life for those around us.",
     },
     {
       title: "Inclusion",
       descr:
-        "Fostering a culture of inclusivity and diversity, where all individuals feel valued and respected, will lead to enhanced creativity, innovation, and a sense of belonging within our organization.",
+        "We are as strong as our weakest link, so we create opportunities for diverse segments of our society.",
     },
   ];
 
