@@ -7,7 +7,7 @@ const SecondHowWork = () => {
   return (
     <SecondHowWorkWrappers>
       <Container>
-        <h3 className="title">How do we work</h3>
+        <h3 className="title">See our thorough process</h3>
         <ol type="1">
           <li>
             <MyLink to="/services/how-we-work/#step1">

@@ -69,6 +69,29 @@ padding: 75px 0;
       
     }
   }
+
+  @media (max-width: 650px) {
+    .wrap1{
+      display: flex;
+      flex-direction: column-reverse;
+      .left-side{
+        width: 100%;
+      }
+      .right-side{
+        width: 100%;
+      }
+    }
+    .wrap2{
+      display: flex;
+      flex-direction: column;
+      .left-side{
+        width: 100%;
+      }
+      .right-side{
+        width: 100%;
+      }
+    }
+  }
 `
 
 export {

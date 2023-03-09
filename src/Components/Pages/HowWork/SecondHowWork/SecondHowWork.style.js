@@ -20,29 +20,32 @@ const SecondHowWorkWrappers = styled.div`
       font-size: 20px;
       line-height: 30px;
       scroll-behavior: "smooth";
+      transition: 300ms;
 
+      &:hover {
+          color: #F67F00;
+            margin-left: 5px;
+          }
+        }
       a {
-        transition: 300ms ease;
         display: flex;
         position: relative;
 
         .spanIn {
           color: blue;
           opacity: 0;
-          transition: 300ms;
         }
-        &:hover {
-          color: blue;
-          .spanIn {
-            display: block;
-            margin-right: 5px;
-            margin-left: 5px;
-            opacity: 1;
-          }
+        
+      }
+    }
+
+    @media (max-width: 650px) {
+      ol{
+        li{
+          font-size: 14px !important;
         }
       }
     }
-  }
 `;
 
 export { SecondHowWorkWrappers };

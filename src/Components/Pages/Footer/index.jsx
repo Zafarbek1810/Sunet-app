@@ -14,17 +14,17 @@ import {
 const card = [
   {
     img: <FontAwesomeIcon icon={faGlobe} />,
-    title: "411 University St, Seattle, USA",
+    title: "75, Mustakillik St., Tashkent, Uzbekistan",
     descr: "Our Address",
   },
   {
     img: <FontAwesomeIcon icon={faEnvelope} />,
-    title: "contact@oceanthemes.net",
+    title: "support@sunet.uz",
     descr: "Our Mailbox",
   },
   {
     img: <FontAwesomeIcon icon={faPhoneVolume} />,
-    title: "+1 -800-456-478-23",
+    title: "+99 871-140-11-48",
     descr: "Our Phone",
   },
 ];
@@ -51,7 +51,7 @@ const Footer = () => {
             <li>About Us</li>
             <li>services</li>
             <li>recources</li>
-            <li>cse</li>
+            <li>CSR</li>
             <li>careers</li>
           </ul>
         </div>
@@ -60,7 +60,7 @@ const Footer = () => {
           Copyright © 2023 SUNET Technology. All rights reserved.
         </p>
 
-        <div className="icons">
+        {/* <div className="icons">
           <MyLink to="/">
             <FontAwesomeIcon icon={faTwitter} />
           </MyLink>
@@ -70,7 +70,7 @@ const Footer = () => {
           <MyLink to="/">
             <FontAwesomeIcon icon={faInstagram} />
           </MyLink>
-        </div>
+        </div> */}
       </Container>
     </FooterWrapper>
   );

@@ -8,7 +8,7 @@ const SecondHistory = () => {
       <Container>
         <div className="wrap">
           <div className="left">
-            <img src="/images/project.jpg" alt="" />
+            <img src="/images/poverty.jpg" alt="" />
           </div>
           <div className="right">
             <h4>WHO WE ARE</h4>

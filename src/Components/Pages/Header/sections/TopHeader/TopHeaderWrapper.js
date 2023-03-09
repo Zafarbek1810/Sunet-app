@@ -32,6 +32,7 @@ const TopHeaderWrapper = styled.div`
     }
   }
   .right_side {
+    margin-left: auto;
     display: flex;
     align-items: baseline;
     border-right: 1px solid #ffffff33;

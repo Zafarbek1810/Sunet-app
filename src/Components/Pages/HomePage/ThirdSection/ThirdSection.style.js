@@ -217,7 +217,8 @@ const BottomStyle = styled.div`
       flex-direction: column;
       transform: translateY(-25%);
 
-      .twoCard{
+      .twoCard1{
+        width: 100%;
         .count{
           font-size: 32px !important;
         }
@@ -226,6 +227,7 @@ const BottomStyle = styled.div`
         font-size: 16px;
         line-height: 20px;
       }
+      
 
       .descr {
         width: 100%;
@@ -233,6 +235,22 @@ const BottomStyle = styled.div`
         font-size: 14px;
         line-height: 18px;
       }
+      }
+      .twoCard2{
+        width: 100%;
+        .count{
+          font-size: 32px !important;
+        }
+
+        .title {
+        font-size: 16px;
+        line-height: 20px;
+      }
+      .descr {
+        width: 100%;
+        color: #ffffff;
+        font-size: 14px;
+        line-height: 18px;
       }
     }
   }

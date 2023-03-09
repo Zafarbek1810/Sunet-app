@@ -82,7 +82,7 @@ const Form = () => {
               />
             </label>
             <label className="label2">
-              <h3>Upload Your Portfolio Here</h3>
+              <h3>Upload Your Resume Here</h3>
               <input className="siteInput"
                 type="file" 
                 {...register("site", { required: true })} />

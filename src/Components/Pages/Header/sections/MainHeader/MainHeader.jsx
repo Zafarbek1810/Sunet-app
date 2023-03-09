@@ -12,8 +12,13 @@ import { ModalContext } from "../../../../../Context/ModalContext/Context";
 
 export const LINKS = [
   {
+    name: "Home",
+    path: "/",
+    id: 7,
+  },
+  {
     name: "About us",
-    path: "/#",
+    path: "/about/our-history",
     id: 1,
     dropMenu: [
       {
@@ -35,7 +40,7 @@ export const LINKS = [
   },
   {
     name: "Services",
-    path: "/#",
+    path: "/services/how-we-work",
     id: 2,
     dropMenu: [
       {
@@ -94,7 +99,7 @@ export const LINKS = [
   },
   {
     name: "Careers",
-    path: "/#",
+    path: "/careers/employer",
     dropMenu: [
       {
         title: "Equal opportunity employer",

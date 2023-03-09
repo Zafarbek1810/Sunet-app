@@ -46,7 +46,7 @@ const SecondSection = () => {
                   alt=""
                   style={{marginBottom:18}}
                 />
-                <h5 className="element__title">Quick Support</h5>
+                <h5 className="element__title">Constant Support</h5>
                 <div className="element__line" />
                 <p className="element__text">
                   24/7 support to make sure the needs of your project met on

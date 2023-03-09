@@ -1,27 +1,29 @@
 import styled from "styled-components";
 
 const StepsWrapper = styled.div`
-
-padding: 75px 0;
+  padding: 75px 0;
   .top {
-    display: flex;
-    align-items: center;
+    /* display: flex; */
+    /* align-items: center; */
+    position: relative;
+    margin-bottom: 100px;
     span {
-      font-size: 24px;
+      font-size: 84px;
       line-height: 38px;
-      border: 1px solid #e7e7e7;
       display: block;
       font-weight: 800;
-      color: #002f49;
-      padding: 10px;
+      color: rgb(0, 0, 0, 0.2);
       margin-right: 30px;
       user-select: none;
-      width: 10%;
+      width: 150px;
       text-align: center;
     }
 
     h3 {
-      width: 90%;
+      position: absolute;
+      top: -18px;
+      left: 30px;
+      width: 100%;
       color: #1b1d21;
       font-family: Nunito sans;
       font-weight: 800;
@@ -34,10 +36,12 @@ padding: 75px 0;
     font-family: "Nunito Sans";
   }
   .step1 {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    margin-bottom: 50px;
     .forma {
-      padding: 40px 50px;
       margin-bottom: 50px;
-      border: 1px solid #e7e7e7;
+      display: flex;
+      gap: 50px;
 
       h4 {
         font-size: 36px;
@@ -53,8 +57,22 @@ padding: 75px 0;
         color: #6d6d6d;
       }
 
+      .left {
+        /* width: 60%; */
+        border: 1px solid #e7e7e7;
+        padding: 40px 50px;
+      }
+
+      .right {
+        width: 40%;
+
+        img {
+          width: 100%;
+        }
+      }
+
       form {
-        width: 100%;
+        /* width: 60%; */
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -136,36 +154,7 @@ padding: 75px 0;
             font-weight: 700;
 
             &:disabled {
-            cursor: not-allowed;
-          }
-          }
-        }
-      }
-    }
-  }
-
-  .step2 {
-    .left {
-      ul {
-        li {
-          display: flex;
-          align-items: center;
-          list-style: none;
-          font-size: 20px;
-          font-family: "Nunito Sans";
-
-          span {
-            background: #fff;
-            padding: 3px;
-            color: #002f49;
-            border-radius: 50%;
-            border: 1px solid #002f49;
-            margin-right: 10px;
-
-            .in {
-              background: #002f49;
-              padding: 3px;
-              border-radius: 50%;
+              cursor: not-allowed;
             }
           }
         }
@@ -173,12 +162,105 @@ padding: 75px 0;
     }
   }
 
+  .step3 {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    display: flex;
+    gap: 50px;
+    .left {
+      width: 60%;
+    }
+    .right {
+      width: 40%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .step2 {
+    border-bottom: 1px solid rgb(0, 0, 0, 0.2);
+    margin-bottom: 50px;
+    .ttop {
+      display: flex;
+      gap: 50px;
+    }
+
+    .left {
+      width: 60%;
+    }
+    ul {
+      li {
+        display: flex;
+        align-items: flex-start;
+        list-style: none;
+        font-size: 20px;
+        font-family: "Nunito Sans";
+
+        span {
+          background: #fff;
+          padding: 3px;
+          color: #002f49;
+          border-radius: 50%;
+          border: 1px solid #002f49;
+          margin-right: 10px;
+          margin-top: 5px;
+
+          .in {
+            background: #002f49;
+            padding: 3px;
+            border-radius: 50%;
+          }
+        }
+      }
+    }
+
+    .right {
+      width: 40%;
+      img {
+        float: top;
+        width: 100%;
+      }
+    }
+  }
+
+  .step7 {
+    .top {
+      position: relative;
+      margin-bottom: 100px;
+
+      h3 {
+        position: absolute;
+        top: -18px;
+        left: 30px;
+        width: 100%;
+        color: #1b1d21;
+        font-family: Nunito sans;
+        font-weight: 800;
+        font-size: 30px;
+      }
+
+      span {
+        font-size: 84px;
+        line-height: 38px;
+        display: block;
+        font-weight: 800;
+        color: rgb(0, 0, 0, 0.2);
+        margin-right: 30px;
+        user-select: none;
+        width: 150px;
+        text-align: center;
+      }
+    }
+  }
+
   .step8 {
+    border-bottom: none;
     .left {
       ul {
         li {
           display: flex;
-          align-items: center;
+          align-items: flex-start;
           list-style: none;
           font-size: 20px;
           font-family: "Nunito Sans";
@@ -190,6 +272,7 @@ padding: 75px 0;
             border-radius: 50%;
             border: 1px solid #002f49;
             margin-right: 10px;
+            margin-top: 5px;
 
             .in {
               background: #002f49;
@@ -203,17 +286,125 @@ padding: 75px 0;
   }
 
   @media (max-width: 650px) {
-    .top{
+    .top {
       flex-direction: column;
 
-      span{
+      span {
         width: 50%;
       }
     }
 
-    .step1{
-      .forma{
-        padding: 10px 20px;
+    p {
+      font-size: 14px;
+    }
+    ul {
+      li {
+        font-size: 14px !important;
+      }
+    }
+
+    h3 {
+      font-size: 24px !important;
+    }
+
+    .step1 {
+      .forma {
+        padding: 0;
+        input,
+        textarea {
+          &::placeholder {
+            font-size: 12px;
+          }
+        }
+        .left {
+          padding: 10px 20px;
+        }
+      }
+    }
+
+    .step2 {
+      .ttop {
+        display: flex;
+        flex-direction: column-reverse;
+        .left {
+          width: 100%;
+        }
+
+        .right {
+          width: 100%;
+        }
+      }
+    }
+
+    .step3 {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .step4 {
+      display: flex;
+      flex-direction: column-reverse;
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+    .step6 {
+      display: flex;
+      flex-direction: column-reverse;
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+
+    .step8 {
+      .ttop {
+        display: flex;
+        flex-direction: column-reverse;
+        .left {
+          width: 100%;
+        }
+
+        .right {
+          width: 100%;
+        }
+      }
+    }
+
+    .step7 {
+      display: flex;
+
+      h3 {
+        margin-bottom: 100px;
+        transform: translateX(-40px);
+      }
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        width: 100%;
+      }
+    }
+    .step3 {
+      display: flex;
+
+      h3 {
+        margin-bottom: 100px;
+      }
+      .left {
+        width: 100%;
+      }
+
+      .right {
+        width: 100%;
       }
     }
   }
