@@ -7,6 +7,8 @@ import { Checkbox, Input, message } from "antd";
 import Loading from "./Loading";
 import { useContextSelector } from "use-context-selector";
 import { ModalContext } from "../../../../Context/ModalContext/Context";
+import axios from "axios";
+import { toast } from "react-toastify";
 // import ReCAPTCHA from "react-google-recaptcha";
 
 const FormModal = () => {
@@ -26,44 +28,20 @@ const FormModal = () => {
   );
 
   const onSubmit = async (values) => {
-    console.log("yuborildi");
-    // const servicesText = Object.keys(values)
-    //   .filter((key) => key.includes("services"))
-    //   .reduce((str, curKey) => {
-    //     str += `  ${curKey.split("-").slice(1).join(" ")}: ${
-    //       values[curKey] ? values[curKey] : false
-    //     }\n`;
-    //     return str;
-    //   }, `Services: \n`);
-    // const phoneAndMessage = `Phone Number: ${values.phoneNumber}\nHow can we help: ${values.message}`;
-    // const text = servicesText + "\n" + phoneAndMessage;
-
-    // const body = JSON.stringify({
-    //   yourName: values.name,
-    //   email: values.email,
-    //   text,
-    // });
-    // console.log(body);
-    // setIsLoading(text);
-    // fetch("https://everbestlab.com/api/send", {
-    //   method: "POST",
-    //   body,
-    //   headers: {
-    //     ["Content-Type"]: "application/json",
-    //   },
-    // })
-    //   .then((res) => {
-    //     reset();
-    //     message.success("Success!");
-    //     setIsModalVisible(false);
-    //   })
-    //   .catch((err) => {
-    //     console.log(err);
-    //     message.error("Failed while sending email :(");
-    //   })
-    //   .finally(() => {
-    //     setIsLoading(false);
-    //   });
+    setIsLoading(true);
+    await axios
+      .post(`http://localhost:8009/api/contactEmail2`, values)
+      .then((res) => {
+        toast.success("Muvaffaqiyatli yuborildi");
+        setIsModalVisible(false);
+        reset();
+      })
+      .catch((err) => {
+        toast.error("Xatolik");
+        console.log(err);
+          setIsModalVisible(false);
+      });
+    setIsLoading(false);
   };
 
   return (

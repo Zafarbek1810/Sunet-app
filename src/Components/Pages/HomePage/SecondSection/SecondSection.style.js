@@ -127,6 +127,7 @@ const SecondSectionWrapper = styled.div`
     width: 15px;
     color: #F67F00;
   }
+
   .bottom{
     display: flex;
     align-items: center;
@@ -135,6 +136,7 @@ const SecondSectionWrapper = styled.div`
     gap: 8px;
 
   }
+  
   .bottom a{
     text-transform: uppercase;
     color: #F67F00;

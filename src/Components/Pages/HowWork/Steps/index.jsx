@@ -1,6 +1,8 @@
+import axios from "axios";
 import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useForm } from "react-hook-form";
+import { toast } from "react-toastify";
 import Loading from "../../../Common/ContactModal/FormModal/Loading";
 import Container from "../../../Common/Container";
 import { StepsWrapper } from "./Steps.style";
@@ -20,6 +22,21 @@ const Steps = () => {
   function onChangeCaptcha(value) {
     setCaptcha(value);
   }
+
+  const onSubmit = async (values) => {
+    setIsLoading(true);
+    await axios
+      .post(`http://localhost:8009/api/contactEmail3`, values)
+      .then((res) => {
+        toast.success("Muvaffaqiyatli yuborildi");
+        reset();
+      })
+      .catch((err) => {
+        toast.error("Xatolik");
+        console.log(err);
+      });
+    setIsLoading(false);
+  };
   return (
     <StepsWrapper>
       <Container>
@@ -37,7 +54,7 @@ const Steps = () => {
                 marked *
               </p>
 
-              <form>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 {/* ------- NAME INPUT --------- */}
                 <label className="label1">
                   <input

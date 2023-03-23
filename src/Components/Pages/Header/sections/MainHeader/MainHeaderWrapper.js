@@ -1,13 +1,13 @@
 import styled from "styled-components";
 
 const MainHeaderWrapper = styled.div`
-  background-color: rgba(0, 0, 0, 0.22);
+  background-color: #fff;
   z-index: 1000;
   svg {
-      color: #000 !important;
-      flex-shrink: 0;
-      width: 10px;
-    }
+    color: #000 !important;
+    flex-shrink: 0;
+    width: 10px;
+  }
 
   .logo {
     flex-shrink: 0;
@@ -43,8 +43,6 @@ const MainHeaderWrapper = styled.div`
     }
   }
 
-  
-
   .header {
     background-color: #fff;
     position: absolute;
@@ -76,27 +74,27 @@ const MainHeaderWrapper = styled.div`
     }
 
     .myDefaultButton {
-      background: #002F49;
+      background: #002f49;
       color: #fff;
       font-weight: 700;
       font-family: Nunito Sans;
       text-transform: uppercase;
       border: none;
-      padding:20px 10px;
+      padding: 20px 10px;
       width: 200px;
       transition: 300ms;
 
       &:hover {
         background-color: #fff;
         color: #000;
-        border: 1px solid #002F49;
+        border: 1px solid #002f49;
       }
     }
   }
 
   .header2 {
     background-color: #fff;
-    position: fixed;
+    position: fixed !important;
     top: 0;
     left: 0;
     right: 0;
@@ -123,20 +121,20 @@ const MainHeaderWrapper = styled.div`
     }
 
     .myDefaultButton {
-      background: #002F49;
+      background: #002f49;
       color: #fff !important;
       font-weight: 700;
       font-family: Nunito Sans;
       text-transform: uppercase;
       border: none;
-      padding:20px 10px;
+      padding: 20px 10px;
       width: 200px;
       transition: 300ms;
 
       &:hover {
         background-color: #fff;
         color: #000 !important;
-        border: 1px solid #002F49;
+        border: 1px solid #002f49;
       }
     }
 
@@ -207,8 +205,6 @@ const MainHeaderWrapper = styled.div`
     justify-content: space-between;
     /* position: relative; */
 
-  
-
     .links_cont {
       display: flex;
       justify-content: center;
@@ -226,7 +222,6 @@ const MainHeaderWrapper = styled.div`
             color: #f67f00 !important;
             position: relative;
           }
-
         }
       }
       p:after {
@@ -292,6 +287,7 @@ const MainHeaderWrapper = styled.div`
 
   // --------------------------- DROPDOWN MENU ----------------------------------
   .content {
+    position: relative;
     .links_cont {
       & > li {
         position: relative;
@@ -331,7 +327,7 @@ const MainHeaderWrapper = styled.div`
         display: flex;
         position: relative;
 
-        .spanIn{
+        .spanIn {
           color: #f67f00;
           opacity: 0;
           transition: 300ms;
@@ -359,7 +355,7 @@ const MainHeaderWrapper = styled.div`
         span {
           color: #f67f00;
 
-          .spanIn{
+          .spanIn {
             display: block;
             margin-right: 5px;
             margin-left: 5px;
@@ -368,6 +364,135 @@ const MainHeaderWrapper = styled.div`
         }
       }
     }
+  }
+
+  .dropdown2 {
+    padding: 30px 0;
+    position: absolute;
+    top: 90%;
+    left: 0;
+    z-index: 444;
+    width: 100%;
+    height: auto;
+    background-color: #fff;
+    font-family: Nunito sans;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s;
+
+    .wrap {
+      display: flex;
+
+      .left {
+        background-color: #f2f2f2;
+        width: 40%;
+        padding-left: 75px;
+        .tabs {
+          width: 100%;
+          margin: auto;
+          display: flex;
+          flex-direction: column;
+          border-bottom: 1px solid #eee;
+          button.tab-item {
+            padding: 10px;
+            background: transparent;
+            border: none;
+            transition-duration: 300ms;
+            position: relative;
+            color: #000;
+            font-family: Nunito sans;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            text-transform: uppercase;
+            svg {
+              display: none;
+              width: 16px;
+            }
+            /* margin-bottom: 15px; */
+
+            &:hover {
+              color: #f67f00;
+              cursor: pointer;
+            }
+            /* &:before {
+              display: none;
+              position: absolute;
+              content: "";
+              left: 0;
+              bottom: 0;
+              width: 100%;
+              height: 1px;
+              background: #000;
+            } */
+          }
+          button.active {
+            color: #f67f00;
+            line-height: 16px;
+            padding: 10px;
+            svg {
+              display: block;
+            }
+            &:hover {
+              cursor: auto;
+            }
+            /* &:before {
+              display: block;
+              background: #f67f00;
+            } */
+          }
+        }
+      }
+      .right {
+        .component {
+          padding: 0px 50px;
+          p {
+            color: #000;
+            font-family: Nunito sans;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 16px;
+            text-transform: uppercase;
+          }
+          ul {
+            padding: 0;
+            li {
+              margin-bottom: 10px;
+              list-style: none;
+              a {
+                display: flex;
+                position: relative;
+                font-weight: 600;
+                font-family: Nunito sans;
+                .spanIn {
+                  color: #f67f00;
+                  opacity: 0;
+                  transition: 300ms;
+                }
+              }
+              a:hover {
+                color: #f67f00;
+
+                .spanIn {
+                  display: block;
+                  margin-right: 5px;
+                  margin-left: 5px;
+                  opacity: 1;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dropdown2.dr-vis {
+    visibility: visible;
+    opacity: 1;
   }
 
   .header {
@@ -464,8 +589,7 @@ const MainHeaderWrapper = styled.div`
   }
 
   @media (max-width: 1024px) {
-
-    .logo{
+    .logo {
       width: 30%;
     }
     li {
@@ -588,4 +712,4 @@ const MainHeaderWrapper = styled.div`
   }
 `;
 
-export {MainHeaderWrapper};
+export { MainHeaderWrapper };

@@ -7,7 +7,6 @@ const BannerWrapper = styled.div`
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 100px;
   user-select: none;
 
   .wrap {
@@ -141,13 +140,12 @@ const BannerWrapper = styled.div`
   }
 `;
 const BannerWrapper2 = styled.div`
-   height: calc(100vh - 100px);
+   height: calc(100vh - 130px);
   background: url("/images/banner2.jpg");
   /* background: linear-gradient(rgba(246, 127, 0, 0.2), rgba(246, 127, 0, 0.2)), url("/images/banner1.jpg"); */
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 100px;
   user-select: none;
 
   .wrap {

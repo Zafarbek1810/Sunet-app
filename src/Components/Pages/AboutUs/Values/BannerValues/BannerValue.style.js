@@ -4,7 +4,6 @@ const BannerValueWrapper=styled.div`
 background-image:url("/images/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  margin-top: 100px;
   height: 50vh;
   display: flex;
   align-items: center;
